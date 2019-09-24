@@ -80,7 +80,12 @@ app.route('/name').get((req, res) => {
 
 
 /** 12) Get data form POST  */
-
+app.route('/name').post((req, res) => {
+  let { first, last } = req.body;
+  res.send({
+    name: `${first} ${last}`
+  })
+})
 
 
 // This would be part of the basic setup of an Express app
